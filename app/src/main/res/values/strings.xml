@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Todo Project</string>
+    <string name="loremShort">Lorem ipsum dolor sit amet.</string>
+    <string name="loremLong">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet massa ac mi luctus venenatis. Aliquam eget accumsan ante.</string>
+
+    <string name="timeHolder">15:51</string>
+    <string name="dateHolder">Thursday, 21 Feb</string>
+    <string name="stepHolder">4985</string>
+    <string name="steps">Steps</string>
+    <string name="stepTargetHolder">10000</string>
+    <string name="stepTarget">Target:</string>
+
+    <string name="todayTasks">Today\'s Tasks</string>
+    <string name="shopList">Shop List</string>
+    <string name="widgetAll">All</string>
+    <string name="widgetOpen">Open</string>
+    <string name="widgetClosed">Closed</string>
+    <string name="taskToday">Today</string>
+    <string name="taskTimeHolder">10.30 - 14.00</string>
+    <string name="allTasks">All Tasks</string>
+    <string name="newTask">New Task</string>
+    <string name="taskDateHolder">21/02/2023</string>
+    <string name="newItem">New Item</string>
+    <string name="calendar">Calendar</string>
+    <string name="calendarDate">21</string>
+    <string name="calendarMonth">February</string>
+    <string name="calendarDay">Tuesday</string>
+
+</resources>

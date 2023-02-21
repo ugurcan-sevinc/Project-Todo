@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="66.67dp"
+    android:background="@drawable/component_navbar_background"
+    android:gravity="center"
+    android:paddingHorizontal="31.00dp">
+
+    <View
+        android:id="@+id/mainPage"
+        android:layout_width="24.33dp"
+        android:layout_height="24.00dp"
+        android:layout_marginEnd="63.33dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/icon_mainpage"
+        />
+
+    <View
+        android:id="@+id/todoList"
+        android:layout_width="24.33dp"
+        android:layout_height="24.00dp"
+        android:layout_marginEnd="63.33dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/icon_todolist"
+        />
+
+    <View
+        android:id="@+id/shopList"
+        android:layout_width="24.33dp"
+        android:layout_height="24.00dp"
+        android:layout_marginEnd="63.33dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/icon_shoplist"
+        />
+
+    <View
+        android:id="@+id/calendar"
+        android:layout_width="24.33dp"
+        android:layout_height="24.00dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/icon_calendar"
+        />
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- NAVIGATION BAR ATTRIBUTES -->
+    <attr name="navbarBackgroundColor" format="color"/>
+    <attr name="navbarSelectedButtonColor" format="color"/>
+    <attr name="navbarNonSelectedButtonColor" format="color"/>
+    
+    <!-- MAIN PAGE ATTRIBUTES -->
+    <attr name="mainBackgroundColor" format="color"/>
+    <attr name="defaultTextColor" format="color"/>
+    <attr name="stepCounterBackgroundColor" format="color"/>
+    <attr name="stepCounterRedColor" format="color"/>
+    <attr name="stepCounterGreenColor" format="color"/>
+    <attr name="stepCounterDefaultTextColor" format="color"/>
+    <attr name="stepCounterTargetTextColor" format="color"/>
+    <attr name="widgetDefaultTextColor" format="color"/>
+    <attr name="widgetLineDefaultColor" format="color"/>
+    <attr name="widgetLineSelectedColor" format="color"/>
+    <attr name="widgetInnerContainerBackgroundColor" format="color"/>
+    <attr name="widgetDateTextColor" format="color"/>
+    <attr name="widgetSelectedTextColor" format="color"/>
+    <attr name="widgetNonSelectedTextColor" format="color"/>
+
+    <!-- TO DO PAGE ATTRIBUTES -->
+    <attr name="tasksContainerBackgroundColor" format="color"/>
+    <attr name="allTasksButtonColor" format="color"/>
+    <attr name="favouriteTasksButtonColor" format="color"/>
+    <attr name="doneTasksButtonColor" format="color"/>
+    <attr name="tasksDefaultTextColor" format="color"/>
+    <attr name="tasksButtonBackgroundColor" format="color"/>
+    <attr name="tasksButtonTextColor" format="color"/>
+    <attr name="tasksButtonIconColor" format="color"/>
+    <attr name="taskBackgroundColor" format="color"/>
+    <attr name="taskCheckboxBackgroundDefaultColor" format="color"/>
+    <attr name="taskCheckboxBackgroundSelectedColor" format="color"/>
+    <attr name="taskCheckboxTickIconColor" format="color"/>
+    <attr name="taskDateTimeTextColor" format="color"/>
+    <attr name="taskDateTimeIconColor" format="color"/>
+    <attr name="taskTopicTextColor" format="color"/>
+    <attr name="taskDescriptionTextColor" format="color"/>
+    <attr name="taskFavouriteButtonDefaultColor" format="color"/>
+    <attr name="taskFavouriteButtonSelectedColor" format="color"/>
+
+    <!-- SHOP LIST PAGE ATTRIBUTES -->
+    <attr name="shopListContainerBackgroundColor" format="color"/>
+    <attr name="shopListDefaultTextColor" format="color"/>
+    <attr name="shopListButtonBackgroundColor" format="color"/>
+    <attr name="shopListButtonTextColor" format="color"/>
+    <attr name="shopListButtonIconColor" format="color"/>
+    <attr name="shopListItemBackgroundColor" format="color"/>
+    <attr name="shopListItemDefaultTextColor" format="color"/>
+    <attr name="shopListCheckboxBackgroundDefaultColor" format="color"/>
+    <attr name="shopListCheckboxBackgroundSelectedColor" format="color"/>
+    <attr name="shopListCheckboxIconColor" format="color"/>
+
+    <!-- CALENDAR ATTRIBUTES -->
+    <attr name="calendarContainerBackgroundColor" format="color"/>
+    <attr name="calendarDefaultTextColor" format="color"/>
+    <attr name="calendarDefaultDayColor" format="color"/>
+    <attr name="calendarItemBackgroundGradientWhiteFF" format="color"/>
+    <attr name="calendarItemBackgroundGradientLightGray00" format="color"/>
+    <attr name="calendarItemTopicTextColor" format="color"/>
+    <attr name="calendarItemDescriptionTextColor" format="color"/>
+    <attr name="calendarItemLinePurpleColor" format="color"/>
+    <attr name="calendarItemLineOrangeColor" format="color"/>
+
+
+
+</resources>

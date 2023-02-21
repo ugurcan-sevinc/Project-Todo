@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="317.67dp"
+    android:layout_height="98.33dp"
+    android:background="@drawable/component_stepcounter_background"
+    android:gravity="center_vertical"
+    android:paddingHorizontal="13.33dp"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/icon"
+        android:layout_width="66.67dp"
+        android:layout_height="66.67dp"
+        android:background="@drawable/icon_stepcounter_1x"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="16.33dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stepHolder"
+                    android:fontFamily="@font/amaranth_regular"
+                    android:textColor="@color/stepCounter_light_red"
+                    android:layout_marginEnd="3.33dp"
+                    android:textSize="21.33dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/steps"
+                    android:fontFamily="@font/amaranth_regular"
+                    android:textColor="?stepCounterDefaultTextColor"
+                    android:textSize="21.33dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amaranth_regular"
+                    android:textColor="?stepCounterTargetTextColor"
+                    android:text="@string/stepTarget"
+                    android:layout_marginEnd="3.33dp"
+                    android:textSize="12.00dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stepTargetHolder"
+                    android:fontFamily="@font/amaranth_regular"
+                    android:textColor="?stepCounterTargetTextColor"
+                    android:layout_marginEnd="3.33dp"
+                    android:textSize="12.00dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/steps"
+                    android:fontFamily="@font/amaranth_regular"
+                    android:textColor="?stepCounterTargetTextColor"
+                    android:textSize="12.00dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="end|center_vertical">
+
+            <LinearLayout
+                android:id="@+id/right_arrow_onClickLayout"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <View
+                    android:id="@+id/right_arrow"
+                    android:layout_width="12.33dp"
+                    android:layout_height="21.33dp"
+                    android:background="@drawable/icon_right_arrow"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

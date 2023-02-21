@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <!-- My Color Scheme [Light] -->
+    <color name="innerContainer_light_gray">#FF8E8E8E</color>
+    <color name="navbarItem_dark_gray">#FF292D32</color>
+    <color name="background_white">#FFFFFFFF</color>
+    <color name="navbarItem_light_gray">#FFBDBFC8</color>
+    <color name="container_light_gray">#FFE7E8EA</color>
+    <color name="checkboxBackground_lighter_blue">#FFE2EBFA</color>
+    <color name="checkboxBackground_blue">#FF0860F7</color>
+    <color name="mainWidgetTextButton_light_gray">#FFD9D9D9</color>
+    <color name="mainWidgetInnerContainer_light_gray">#FFF9F9F9</color>
+    <color name="gradient_White">#FFFFFFFF</color>
+    <color name="gradient_LightGray">#00F9F9F9</color>
+    <color name="calendar_light_purple">#FF9F84FF</color>
+    <color name="navbar_light_gray">#FFFBFBFB</color>
+    <color name="stepCounter_light_red">#FFFF6C6C</color>
+    <color name="mainWidget_line_black">#FF000000</color>
+    <color name="favouriteTask_yellow">#FFFFE600</color>
+    <color name="mainWidget_text_gray">#FF999999</color>
+    <color name="doneTasks_light_brown">#FFA38A73</color>
+    <color name="calendar_light_orange">#FFFFAF66</color>
+    <color name="allTasks_soft_blue">#FF5F74E0</color>
+    <color name="stepCounter_light_green">#FFA5FFAE</color>
+
+    <!-- My Color Scheme [Dark] -->
+
+
+
+</resources>

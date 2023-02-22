@@ -52,6 +52,7 @@
         <item name="taskDescriptionTextColor">@color/innerContainer_light_gray</item>
         <item name="taskFavouriteButtonDefaultColor">@color/navbarItem_dark_gray</item>
         <item name="taskFavouriteButtonSelectedColor">@color/favouriteTask_yellow</item>
+        <item name="taskLineColor">@color/mainWidgetTextButton_light_gray</item>
 
         <!-- SHOP LIST PAGE ATTRIBUTES -->
         <item name="shopListContainerBackgroundColor">@color/mainWidgetInnerContainer_light_gray</item>

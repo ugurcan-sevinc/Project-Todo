@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -15,7 +16,8 @@
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        android:baselineAligned="false">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,7 +31,7 @@
                 android:text="@string/todayTasks"
                 android:fontFamily="@font/amaranth_regular"
                 android:textColor="?widgetDefaultTextColor"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 android:layout_marginVertical="18.33dp"/>
 
         </LinearLayout>
@@ -46,7 +48,7 @@
                 android:text="@string/shopList"
                 android:fontFamily="@font/amaranth_regular"
                 android:textColor="?widgetDefaultTextColor"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 android:layout_marginVertical="18.33dp"/>
 
         </LinearLayout>
@@ -87,6 +89,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
+            android:id="@+id/innerDateLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -100,20 +103,177 @@
                 android:layout_height="wrap_content"
                 android:text="@string/todayTasks"
                 android:fontFamily="@font/amaranth_regular"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:layout_marginTop="24dp"
                 android:textColor="?widgetDefaultTextColor"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/dateHolder"
-                android:fontFamily="@font/amaranth_regular"
-                android:textSize="14dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="24dp"
-                android:textColor="?widgetDateTextColor"/>
+                android:fontFamily="@font/amaranth_regular"
+                android:text="@string/dateHolder"
+                android:textColor="?widgetDateTextColor"
+                android:textSize="14sp"
+                tools:ignore="TextSizeCheck,TextContrastCheck" />
 
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/innerDateLayout"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/allClickArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="@string/widgetAll"
+                        android:fontFamily="@font/amaranth_bold"
+                        android:textColor="?widgetSelectedTextColor"
+                        android:layout_marginEnd="5dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/component_mainpage_widget_notification_background"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="7dp"
+                        android:gravity="center"
+                        android:backgroundTint="?widgetSelectedTextColor">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="5"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            tools:ignore="TextSizeCheck" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/openClickArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:fontFamily="@font/amaranth_bold"
+                        android:text="@string/widgetOpen"
+                        android:textColor="?widgetNonSelectedTextColor"
+                        android:textSize="18sp"
+                        tools:ignore="TextContrastCheck"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/component_mainpage_widget_notification_background"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="7dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="5"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            tools:ignore="TextSizeCheck" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="start"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/closedClickArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/amaranth_bold"
+                        android:text="@string/widgetClosed"
+                        android:textColor="?widgetNonSelectedTextColor"
+                        android:textSize="18sp"
+                        tools:ignore="TextContrastCheck"
+                        android:layout_marginEnd="5dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/component_mainpage_widget_notification_background"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="7dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            tools:ignore="TextSizeCheck" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
 
         </LinearLayout>
 

@@ -37,7 +37,7 @@
                     android:fontFamily="@font/amaranth_regular"
                     android:textColor="@color/stepCounter_light_red"
                     android:layout_marginEnd="3.33dp"
-                    android:textSize="21.33dp"/>
+                    android:textSize="21.33sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -45,7 +45,7 @@
                     android:text="@string/steps"
                     android:fontFamily="@font/amaranth_regular"
                     android:textColor="?stepCounterDefaultTextColor"
-                    android:textSize="21.33dp"/>
+                    android:textSize="21.33sp"/>
 
             </LinearLayout>
 
@@ -61,7 +61,7 @@
                     android:textColor="?stepCounterTargetTextColor"
                     android:text="@string/stepTarget"
                     android:layout_marginEnd="3.33dp"
-                    android:textSize="12.00dp"/>
+                    android:textSize="15.00sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -70,7 +70,7 @@
                     android:fontFamily="@font/amaranth_regular"
                     android:textColor="?stepCounterTargetTextColor"
                     android:layout_marginEnd="3.33dp"
-                    android:textSize="12.00dp"/>
+                    android:textSize="15.00sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -78,7 +78,7 @@
                     android:text="@string/steps"
                     android:fontFamily="@font/amaranth_regular"
                     android:textColor="?stepCounterTargetTextColor"
-                    android:textSize="12.00dp"/>
+                    android:textSize="15.00sp"/>
 
             </LinearLayout>
 

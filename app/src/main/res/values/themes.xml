@@ -31,7 +31,7 @@
         <item name="widgetInnerContainerBackgroundColor">@color/mainWidgetInnerContainer_light_gray</item>
         <item name="widgetDateTextColor">@color/mainWidget_text_gray</item>
         <item name="widgetSelectedTextColor">@color/checkboxBackground_blue</item>
-        <item name="widgetNonSelectedTextColor">@color/mainWidgetTextButton_light_gray</item>
+        <item name="widgetNonSelectedTextColor">@color/mainWidget_text_gray</item>
 
         <!-- TO DO PAGE ATTRIBUTES -->
         <item name="tasksContainerBackgroundColor">@color/mainWidgetInnerContainer_light_gray</item>

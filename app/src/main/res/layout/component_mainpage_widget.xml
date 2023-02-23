@@ -49,14 +49,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:background="?widgetLineDefaultColor">
 
-        <View
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/selectedLine"
             android:layout_width="0dp"
-            android:layout_height="1.5dp"
+            android:layout_height="match_parent"
             android:background="?widgetLineSelectedColor"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintWidth_percent="0.5"
             />
 

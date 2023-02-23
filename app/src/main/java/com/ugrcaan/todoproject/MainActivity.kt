@@ -4,8 +4,11 @@ import android.content.Intent
 import android.content.IntentFilter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
+import android.view.animation.DecelerateInterpolator
+import androidx.constraintlayout.widget.ConstraintSet
 import androidx.lifecycle.ViewModelProvider
+import androidx.transition.ChangeBounds
+import androidx.transition.TransitionManager
 import com.ugrcaan.todoproject.databinding.ActivityMainBinding
 import com.ugrcaan.todoproject.view.DateUpdateReceiver
 import com.ugrcaan.todoproject.view.TimeTickReceiver
@@ -42,6 +45,14 @@ class MainActivity : AppCompatActivity() {
         val dateFilter = IntentFilter(Intent.ACTION_DATE_CHANGED)
         registerReceiver(dateReceiver, dateFilter)
 
+        binding.widget.textTodaysTasks.setOnClickListener {
+            slideAnimation(0)
+        }
+
+        binding.widget.textShopList.setOnClickListener {
+            slideAnimation(1)
+        }
+
     }
 
     override fun onDestroy() {
@@ -50,4 +61,35 @@ class MainActivity : AppCompatActivity() {
         unregisterReceiver(timeReceiver)
         unregisterReceiver(dateReceiver)
     }
+
+    private fun slideAnimation(currentPage: Int){
+        val constrainSet = ConstraintSet()
+        constrainSet.clone(binding.widget.lineLayout)
+        constrainSet.clear(binding.widget.selectedLine.id, ConstraintSet.START)
+        constrainSet.clear(binding.widget.selectedLine.id, ConstraintSet.END)
+
+        if(currentPage == 0){
+            constrainSet.connect(
+                binding.widget.selectedLine.id,
+                ConstraintSet.START,
+                ConstraintSet.PARENT_ID,
+                ConstraintSet.START
+            )
+        }
+        else if (currentPage == 1){
+            constrainSet.connect(
+                binding.widget.selectedLine.id,
+                ConstraintSet.END,
+                ConstraintSet.PARENT_ID,
+                ConstraintSet.END
+            )
+        }
+
+
+        val transition = ChangeBounds()
+        transition.interpolator = DecelerateInterpolator()
+        TransitionManager.beginDelayedTransition(binding.widget.lineLayout, transition)
+        constrainSet.applyTo(binding.widget.lineLayout)
+    }
+
 }

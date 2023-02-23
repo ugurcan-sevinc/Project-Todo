@@ -9,57 +9,42 @@
     android:background="@drawable/component_mainpage_widget_background"
     android:elevation="1dp">
 
-    <LinearLayout
-        android:id="@+id/swapper"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textTodaysTasks"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_marginVertical="20dp"
+        android:fontFamily="@font/amaranth_regular"
+        android:text="@string/todayTasks"
+        android:textColor="?widgetDefaultTextColor"
+        android:textSize="16sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textShopList"
+        app:layout_constraintHorizontal_bias="0.25"
+        />
+
+    <TextView
+        android:id="@+id/textShopList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:fontFamily="@font/amaranth_regular"
+        android:text="@string/shopList"
+        android:textColor="?widgetDefaultTextColor"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:baselineAligned="false">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/todayTasks"
-                android:fontFamily="@font/amaranth_regular"
-                android:textColor="?widgetDefaultTextColor"
-                android:textSize="16sp"
-                android:layout_marginVertical="18.33dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/shopList"
-                android:fontFamily="@font/amaranth_regular"
-                android:textColor="?widgetDefaultTextColor"
-                android:textSize="16sp"
-                android:layout_marginVertical="18.33dp"/>
-
-        </LinearLayout>
-    </LinearLayout>
+        app:layout_constraintStart_toStartOf="@+id/textTodaysTasks"
+        app:layout_constraintHorizontal_bias="0.75"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/lineLayout"
         android:layout_width="match_parent"
         android:layout_height="1.5dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/swapper"
+        app:layout_constraintTop_toBottomOf="@id/textTodaysTasks"
+        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="?widgetLineDefaultColor">
@@ -88,203 +73,108 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <LinearLayout
-            android:id="@+id/innerDateLayout"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/innerTextTodaysTasks"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/amaranth_regular"
+            android:text="@string/todayTasks"
+            android:textColor="?widgetDefaultTextColor"
+            android:textSize="20sp"
+            android:layout_marginTop="25dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:gravity="center">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/todayTasks"
-                android:fontFamily="@font/amaranth_regular"
-                android:textSize="20sp"
-                android:layout_marginTop="24dp"
-                android:textColor="?widgetDefaultTextColor"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="24dp"
-                android:fontFamily="@font/amaranth_regular"
-                android:text="@string/dateHolder"
-                android:textColor="?widgetDateTextColor"
-                android:textSize="14sp"
-                tools:ignore="TextSizeCheck,TextContrastCheck" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/buttonPanel"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/innerTextDate"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/amaranth_regular"
+            android:text="@string/dateHolder"
+            android:textColor="?widgetDateTextColor"
+            android:textSize="14sp"
+            tools:ignore="TextSizeCheck,TextContrastCheck"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/innerDateLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/innerTextTodaysTasks"/>
+
+        <TextView
+            android:id="@+id/innerTextAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/amaranth_bold"
+            android:text="@string/widgetAll"
+            android:textColor="?widgetSelectedTextColor"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/innerTextOpen"
+            app:layout_constraintHorizontal_bias="0.33"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/innerTextDate" />
+
+        <TextView
+            android:id="@+id/innerTextOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/amaranth_bold"
+            android:text="@string/widgetOpen"
+            android:textColor="?widgetNonSelectedTextColor"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/innerTextDate"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/innerTextClosed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/amaranth_bold"
+            android:text="@string/widgetClosed"
+            android:textColor="?widgetNonSelectedTextColor"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.66"
+            app:layout_constraintStart_toEndOf="@+id/innerTextOpen"
+            app:layout_constraintTop_toBottomOf="@+id/innerTextDate"
+            tools:ignore="TextContrastCheck"/>
+
+        <View
+            android:id="@+id/innerLineLayout"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
             android:orientation="horizontal"
-            android:gravity="center">
+            app:layout_constraintTop_toBottomOf="@id/innerTextOpen"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="?widgetLineDefaultColor"/>
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="end"
-                android:layout_weight="1">
+        <View
+            android:id="@+id/innerSelectedLine"
+            android:layout_width="0dp"
+            android:layout_height="1.5dp"
+            android:background="?widgetSelectedTextColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/innerLineLayout"
+            app:layout_constraintBottom_toBottomOf="@id/innerLineLayout"
+            app:layout_constraintWidth_percent="0.33"
+            />
 
-                <LinearLayout
-                    android:id="@+id/allClickArea"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:text="@string/widgetAll"
-                        android:fontFamily="@font/amaranth_bold"
-                        android:textColor="?widgetSelectedTextColor"
-                        android:layout_marginEnd="5dp"/>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/component_mainpage_widget_notification_background"
-                        android:orientation="vertical"
-                        android:paddingHorizontal="7dp"
-                        android:gravity="center"
-                        android:backgroundTint="?widgetSelectedTextColor">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
-                            android:text="5"
-                            android:textColor="@color/white"
-                            android:textSize="10sp"
-                            tools:ignore="TextSizeCheck" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_weight="1">
-
-                <LinearLayout
-                    android:id="@+id/openClickArea"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="5dp"
-                        android:fontFamily="@font/amaranth_bold"
-                        android:text="@string/widgetOpen"
-                        android:textColor="?widgetNonSelectedTextColor"
-                        android:textSize="18sp"
-                        tools:ignore="TextContrastCheck"/>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/component_mainpage_widget_notification_background"
-                        android:orientation="vertical"
-                        android:paddingHorizontal="7dp"
-                        android:gravity="center">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
-                            android:text="5"
-                            android:textColor="@color/white"
-                            android:textSize="10sp"
-                            tools:ignore="TextSizeCheck" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="start"
-                android:layout_weight="1">
-
-                <LinearLayout
-                    android:id="@+id/closedClickArea"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/amaranth_bold"
-                        android:text="@string/widgetClosed"
-                        android:textColor="?widgetNonSelectedTextColor"
-                        android:textSize="18sp"
-                        tools:ignore="TextContrastCheck"
-                        android:layout_marginEnd="5dp"/>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/component_mainpage_widget_notification_background"
-                        android:orientation="vertical"
-                        android:paddingHorizontal="7dp"
-                        android:gravity="center">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
-                            android:text="0"
-                            android:textColor="@color/white"
-                            android:textSize="10sp"
-                            tools:ignore="TextSizeCheck" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
-        
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintTop_toBottomOf="@id/buttonPanel"
+            app:layout_constraintTop_toBottomOf="@id/innerLineLayout"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

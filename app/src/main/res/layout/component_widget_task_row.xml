@@ -4,10 +4,110 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:elevation="10dp"
+    android:layout_marginHorizontal="15dp"
     android:background="@drawable/component_widget_task_row_background">
 
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/taskTopic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amaranth_regular"
+        android:text="@string/loremShort"
+        android:textColor="?defaultTextColor"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"/>
+
+    <TextView
+        android:id="@+id/taskDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amaranth_regular"
+        android:text="@string/loremShort"
+        android:textColor="?taskDescriptionTextColor"
+        android:textSize="18sp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/taskTopic"
+        android:layout_marginStart="15dp"/>
+
+    <View
+        android:id="@+id/taskCheckbox"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/component_task_checkbox_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"/>
+
+    <View
+        android:id="@+id/taskLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/taskDescription"
+        android:background="?taskLineColor"
+        android:layout_marginTop="20dp"/>
+
+    <View
+        android:id="@+id/taskCalendar"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/icon_task_calendar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/taskLine" />
+
+    <TextView
+        android:id="@+id/taskCalendarDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginVertical="10dp"
+        android:fontFamily="@font/amaranth_regular"
+        android:text="@string/taskToday"
+        android:textColor="?taskDescriptionTextColor"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/taskCalendar"
+        app:layout_constraintTop_toBottomOf="@id/taskLine" />
+
+    <View
+        android:id="@+id/taskClock"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:background="@drawable/icon_task_clock"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/taskCalendarDay"
+        app:layout_constraintTop_toBottomOf="@id/taskLine"
+        android:layout_marginStart="10dp"
+        android:layout_marginVertical="10dp"/>
+
+    <TextView
+        android:id="@+id/taskTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/taskTimeHolder"
+        android:textSize="10sp"
+        android:fontFamily="@font/amaranth_regular"
+        android:textColor="?taskDescriptionTextColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/taskClock"
+        app:layout_constraintTop_toBottomOf="@id/taskLine"
+        android:layout_marginStart="5dp"
+        android:layout_marginVertical="10dp"/>
+
+
+    <!--LinearLayout
         android:id="@+id/taskTextParentLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,22 +125,9 @@
             android:orientation="vertical"
             android:layout_weight="1">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/amaranth_regular"
-                android:text="@string/loremShort"
-                android:textColor="?defaultTextColor"
-                android:textSize="22sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/amaranth_regular"
-                android:text="@string/loremShort"
-                android:textColor="?taskDescriptionTextColor"
-                android:textSize="18sp"
-                android:layout_marginTop="5dp"/>
+
+
 
         </LinearLayout>
 
@@ -50,24 +137,11 @@
             android:layout_weight="1"
             android:gravity="end|center_vertical">
 
-            <View
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/component_task_checkbox_background" />
 
         </LinearLayout>
     </LinearLayout>
 
-    <View
-        android:id="@+id/taskLine"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginHorizontal="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/taskTextParentLayout"
-        android:background="?taskLineColor"
-        android:layout_marginTop="20dp"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -86,34 +160,7 @@
             android:layout_weight="1"
             android:gravity="center_vertical">
 
-            <View
-                android:layout_width="11dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/icon_task_calendar"
-                android:layout_marginEnd="4dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/taskToday"
-                android:textSize="10sp"
-                android:fontFamily="@font/amaranth_regular"
-                android:textColor="?taskDescriptionTextColor"
-                android:layout_marginEnd="10dp"/>
-
-            <View
-                android:layout_width="12dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/icon_task_clock"
-                android:layout_marginEnd="4dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/taskTimeHolder"
-                android:textSize="10sp"
-                android:fontFamily="@font/amaranth_regular"
-                android:textColor="?taskDescriptionTextColor"/>
 
 
         </LinearLayout>
@@ -142,6 +189,6 @@
         </LinearLayout>
 
 
-    </LinearLayout>
+    </LinearLayout-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

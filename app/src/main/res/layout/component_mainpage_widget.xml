@@ -9,42 +9,57 @@
     android:background="@drawable/component_mainpage_widget_background"
     android:elevation="1dp">
 
-    <TextView
-        android:id="@+id/textTodaysTasks"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="20dp"
-        android:fontFamily="@font/amaranth_regular"
-        android:text="@string/todayTasks"
-        android:textColor="?widgetDefaultTextColor"
-        android:textSize="16sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textShopList"
-        app:layout_constraintHorizontal_bias="0.25"
-        />
-
-    <TextView
-        android:id="@+id/textShopList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="20dp"
-        android:fontFamily="@font/amaranth_regular"
-        android:text="@string/shopList"
-        android:textColor="?widgetDefaultTextColor"
-        android:textSize="16sp"
-        app:layout_constraintTop_toTopOf="parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttonsContainerLayout"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textTodaysTasks"
-        app:layout_constraintHorizontal_bias="0.75"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textTodaysTasks"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/amaranth_regular"
+            android:text="@string/todayTasks"
+            android:textColor="?widgetDefaultTextColor"
+            android:textSize="16sp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textShopList"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            app:layout_constraintHeight_percent="1"/>
+
+        <TextView
+            android:id="@+id/textShopList"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/amaranth_regular"
+            android:text="@string/shopList"
+            android:textColor="?widgetDefaultTextColor"
+            android:textSize="16sp"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textTodaysTasks"
+            app:layout_constraintHorizontal_bias="0.75"
+            app:layout_constraintWidth_percent="0.5"
+            app:layout_constraintHeight_percent="1"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/lineLayout"
         android:layout_width="match_parent"
         android:layout_height="1.5dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/textTodaysTasks"
-        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/buttonsContainerLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="?widgetLineDefaultColor">
@@ -61,25 +76,26 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/innerContainerLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginHorizontal="5dp"
         android:layout_marginBottom="5dp"
         android:background="?widgetInnerContainerBackgroundColor"
-        app:layout_constraintTop_toBottomOf="@id/lineLayout"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/lineLayout">
 
         <TextView
             android:id="@+id/innerTextTodaysTasks"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/amaranth_regular"
             android:text="@string/todayTasks"
             android:textColor="?widgetDefaultTextColor"
             android:textSize="20sp"
-            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -94,10 +110,10 @@
             android:text="@string/dateHolder"
             android:textColor="?widgetDateTextColor"
             android:textSize="14sp"
-            tools:ignore="TextSizeCheck,TextContrastCheck"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/innerTextTodaysTasks"/>
+            app:layout_constraintTop_toBottomOf="@id/innerTextTodaysTasks"
+            tools:ignore="TextSizeCheck,TextContrastCheck" />
 
         <TextView
             android:id="@+id/innerTextAll"
@@ -141,37 +157,36 @@
             app:layout_constraintHorizontal_bias="0.66"
             app:layout_constraintStart_toEndOf="@+id/innerTextOpen"
             app:layout_constraintTop_toBottomOf="@+id/innerTextDate"
-            tools:ignore="TextContrastCheck"/>
+            tools:ignore="TextContrastCheck" />
 
         <View
             android:id="@+id/innerLineLayout"
             android:layout_width="match_parent"
             android:layout_height="1.5dp"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@id/innerTextOpen"
             android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:background="?widgetLineDefaultColor"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            android:background="?widgetLineDefaultColor"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/innerTextOpen" />
 
         <View
             android:id="@+id/innerSelectedLine"
             android:layout_width="0dp"
             android:layout_height="1.5dp"
             android:background="?widgetSelectedTextColor"
+            app:layout_constraintBottom_toBottomOf="@id/innerLineLayout"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/innerLineLayout"
-            app:layout_constraintBottom_toBottomOf="@id/innerLineLayout"
-            app:layout_constraintWidth_percent="0.33"
-            />
+            app:layout_constraintWidth_percent="0.33" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintTop_toBottomOf="@id/innerLineLayout"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/innerLineLayout" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

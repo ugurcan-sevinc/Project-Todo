@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.TodoProject" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.TodoProject" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_200</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -10,7 +10,73 @@
         <item name="colorSecondaryVariant">@color/teal_200</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+
+        <item name="android:statusBarColor">@color/background_white</item>
+        <item name="android:navigationBarColor">@color/background_white</item>
         <!-- Customize your theme here. -->
+
+        <item name="navbarBackgroundColor">@color/navbar_light_gray</item>
+        <item name="navbarSelectedButtonColor">@color/navbarItem_dark_gray</item>
+        <item name="navbarNonSelectedButtonColor">@color/navbarItem_light_gray</item>
+
+        <!-- MAIN PAGE ATTRIBUTES -->
+        <item name="mainBackgroundColor">@color/background_white</item>
+        <item name="defaultTextColor">@color/navbarItem_dark_gray</item>
+        <item name="stepCounterBackgroundColor">@color/navbarItem_dark_gray</item>
+        <item name="stepCounterRedColor">@color/stepCounter_light_red</item>
+        <item name="stepCounterGreenColor">@color/stepCounter_light_green</item>
+        <item name="stepCounterDefaultTextColor">@color/white</item>
+        <item name="stepCounterTargetTextColor">@color/navbarItem_light_gray</item>
+        <item name="widgetDefaultTextColor">@color/navbarItem_dark_gray</item>
+        <item name="widgetLineDefaultColor">@color/container_light_gray</item>
+        <item name="widgetLineSelectedColor">@color/mainWidget_line_black</item>
+        <item name="widgetInnerContainerBackgroundColor">@color/mainWidgetInnerContainer_light_gray</item>
+        <item name="widgetDateTextColor">@color/mainWidget_text_gray</item>
+        <item name="widgetSelectedTextColor">@color/checkboxBackground_blue</item>
+        <item name="widgetNonSelectedTextColor">@color/mainWidget_text_gray</item>
+
+        <!-- TO DO PAGE ATTRIBUTES -->
+        <item name="tasksContainerBackgroundColor">@color/mainWidgetInnerContainer_light_gray</item>
+        <item name="allTasksButtonColor">@color/allTasks_soft_blue</item>
+        <item name="favouriteTasksButtonColor">@color/favouriteTask_yellow</item>
+        <item name="doneTasksButtonColor">@color/doneTasks_light_brown</item>
+        <item name="tasksDefaultTextColor">@color/navbarItem_dark_gray</item>
+        <item name="tasksButtonBackgroundColor">@color/checkboxBackground_lighter_blue</item>
+        <item name="tasksButtonTextColor">@color/checkboxBackground_blue</item>
+        <item name="tasksButtonIconColor">@color/checkboxBackground_blue</item>
+        <item name="taskBackgroundColor">@color/background_white</item>
+        <item name="taskCheckboxBackgroundDefaultColor">@color/checkboxBackground_lighter_blue</item>
+        <item name="taskCheckboxBackgroundSelectedColor">@color/checkboxBackground_blue</item>
+        <item name="taskCheckboxTickIconColor">@color/white</item>
+        <item name="taskDateTimeTextColor">@color/innerContainer_light_gray</item>
+        <item name="taskDateTimeIconColor">@color/innerContainer_light_gray</item>
+        <item name="taskTopicTextColor">@color/navbarItem_dark_gray</item>
+        <item name="taskDescriptionTextColor">@color/innerContainer_light_gray</item>
+        <item name="taskFavouriteButtonDefaultColor">@color/navbarItem_dark_gray</item>
+        <item name="taskFavouriteButtonSelectedColor">@color/favouriteTask_yellow</item>
+        <item name="taskLineColor">@color/mainWidgetTextButton_light_gray</item>
+
+        <!-- SHOP LIST PAGE ATTRIBUTES -->
+        <item name="shopListContainerBackgroundColor">@color/mainWidgetInnerContainer_light_gray</item>
+        <item name="shopListDefaultTextColor">@color/navbarItem_dark_gray</item>
+        <item name="shopListButtonBackgroundColor">@color/checkboxBackground_lighter_blue</item>
+        <item name="shopListButtonTextColor">@color/checkboxBackground_blue</item>
+        <item name="shopListButtonIconColor">@color/checkboxBackground_blue</item>
+        <item name="shopListItemBackgroundColor">@color/background_white</item>
+        <item name="shopListItemDefaultTextColor">@color/navbarItem_dark_gray</item>
+        <item name="shopListCheckboxBackgroundDefaultColor">@color/checkboxBackground_lighter_blue</item>
+        <item name="shopListCheckboxBackgroundSelectedColor">@color/checkboxBackground_blue</item>
+        <item name="shopListCheckboxIconColor">@color/white</item>
+
+        <!-- CALENDAR ATTRIBUTES -->
+        <item name="calendarContainerBackgroundColor">@color/mainWidgetInnerContainer_light_gray</item>
+        <item name="calendarDefaultTextColor">@color/navbarItem_dark_gray</item>
+        <item name="calendarDefaultDayColor">@color/innerContainer_light_gray</item>
+        <item name="calendarItemBackgroundGradientWhiteFF">@color/gradient_White</item>
+        <item name="calendarItemBackgroundGradientLightGray00">@color/gradient_LightGray</item>
+        <item name="calendarItemTopicTextColor">@color/navbarItem_dark_gray</item>
+        <item name="calendarItemDescriptionTextColor">@color/innerContainer_light_gray</item>
+        <item name="calendarItemLinePurpleColor">@color/calendar_light_purple</item>
+        <item name="calendarItemLineOrangeColor">@color/calendar_light_orange</item>
     </style>
 </resources>

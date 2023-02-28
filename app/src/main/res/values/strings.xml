@@ -25,5 +25,7 @@
     <string name="calendarDate">21</string>
     <string name="calendarMonth">February</string>
     <string name="calendarDay">Tuesday</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

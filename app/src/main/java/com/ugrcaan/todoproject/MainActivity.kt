@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         setNavbarButtonsOnClickListeners(binding.navbar.todoList, TodoListFragment::class.java)
         setNavbarButtonsOnClickListeners(binding.navbar.shopList, ShopListFragment::class.java)
         setNavbarButtonsOnClickListeners(binding.navbar.calendar, CalendarFragment::class.java)
-
     }
 
     private fun setNavbarButtonsOnClickListeners(navbarItem: ImageView, fragmentClass: Class<*>) {

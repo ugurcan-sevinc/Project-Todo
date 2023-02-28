@@ -75,119 +75,15 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/innerContainerLayout"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/innerContainerFragment"
+        android:name="com.ugrcaan.todoproject.WidgetTaskFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginBottom="5dp"
-        android:background="?widgetInnerContainerBackgroundColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lineLayout">
-
-        <TextView
-            android:id="@+id/innerTextTodaysTasks"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/amaranth_regular"
-            android:text="@string/todayTasks"
-            android:textColor="?widgetDefaultTextColor"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/innerTextDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="24dp"
-            android:fontFamily="@font/amaranth_regular"
-            android:text="@string/dateHolder"
-            android:textColor="?widgetDateTextColor"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/innerTextTodaysTasks"
-            tools:ignore="TextSizeCheck,TextContrastCheck" />
-
-        <TextView
-            android:id="@+id/innerTextAll"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/amaranth_bold"
-            android:text="@string/widgetAll"
-            android:textColor="?widgetSelectedTextColor"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toStartOf="@+id/innerTextOpen"
-            app:layout_constraintHorizontal_bias="0.33"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/innerTextDate" />
-
-        <TextView
-            android:id="@+id/innerTextOpen"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/amaranth_bold"
-            android:text="@string/widgetOpen"
-            android:textColor="?widgetNonSelectedTextColor"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/innerTextDate"
-            tools:ignore="TextContrastCheck" />
-
-        <TextView
-            android:id="@+id/innerTextClosed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/amaranth_bold"
-            android:text="@string/widgetClosed"
-            android:textColor="?widgetNonSelectedTextColor"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.66"
-            app:layout_constraintStart_toEndOf="@+id/innerTextOpen"
-            app:layout_constraintTop_toBottomOf="@+id/innerTextDate"
-            tools:ignore="TextContrastCheck" />
-
-        <View
-            android:id="@+id/innerLineLayout"
-            android:layout_width="match_parent"
-            android:layout_height="1.5dp"
-            android:layout_marginTop="10dp"
-            android:background="?widgetLineDefaultColor"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/innerTextOpen" />
-
-        <View
-            android:id="@+id/innerSelectedLine"
-            android:layout_width="0dp"
-            android:layout_height="1.5dp"
-            android:background="?widgetSelectedTextColor"
-            app:layout_constraintBottom_toBottomOf="@id/innerLineLayout"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/innerLineLayout"
-            app:layout_constraintWidth_percent="0.33" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/innerLineLayout" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@id/buttonsContainerLayout"
+        tools:layout="@layout/fragment_widget_task"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

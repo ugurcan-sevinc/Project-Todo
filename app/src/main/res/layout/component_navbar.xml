@@ -1,56 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="66.67dp"
     android:background="@drawable/component_navbar_background"
-    android:gravity="center"
-    android:paddingHorizontal="31.00dp">
+    android:gravity="center">
 
-    <View
+    <ImageView
         android:id="@+id/mainPage"
-        android:layout_width="24.33dp"
-        android:layout_height="24.00dp"
-        android:layout_marginEnd="63.33dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/icon_mainpage"
-        />
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/icon_mainpage"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/todoList"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.2" />
 
-    <View
+    <ImageView
         android:id="@+id/todoList"
-        android:layout_width="24.33dp"
-        android:layout_height="24.00dp"
-        android:layout_marginEnd="63.33dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/icon_todolist"
-        />
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/icon_todolist"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/shopList"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/mainPage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.2" />
 
-    <View
+    <ImageView
         android:id="@+id/shopList"
-        android:layout_width="24.33dp"
-        android:layout_height="24.00dp"
-        android:layout_marginEnd="63.33dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/icon_shoplist"
-        />
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/icon_shoplist"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/calendar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/todoList"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.2" />
 
-    <View
+    <ImageView
         android:id="@+id/calendar"
-        android:layout_width="24.33dp"
-        android:layout_height="24.00dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/icon_calendar"
-        />
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/icon_calendar"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/shopList"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.2" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,9 +1,12 @@
 package com.ugrcaan.todoproject
 
 import android.content.res.Resources.Theme
+import android.graphics.PorterDuff
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.ugrcaan.todoproject.databinding.ActivityMainBinding
 import com.ugrcaan.todoproject.vm.MainVM
@@ -24,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun setNavbarButtonsOnClickListeners(navbarItem: View, fragmentClass: Class<*>) {
+    private fun setNavbarButtonsOnClickListeners(navbarItem: ImageView, fragmentClass: Class<*>) {
         navbarItem.setOnClickListener{
             val fragmentTransaction = supportFragmentManager.beginTransaction()
             val fragment = fragmentClass.newInstance() as Fragment
@@ -32,17 +35,12 @@ class MainActivity : AppCompatActivity() {
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
 
-            binding.navbar.mainPage.background.setTint(resources.getColor(R.color.navbarItem_light_gray))
-            binding.navbar.todoList.background.setTint(resources.getColor(R.color.navbarItem_light_gray))
-            binding.navbar.shopList.background.setTint(resources.getColor(R.color.navbarItem_light_gray))
-            binding.navbar.calendar.background.setTint(resources.getColor(R.color.navbarItem_light_gray))
+            binding.navbar.mainPage.setColorFilter(ContextCompat.getColor(this, R.color.navbarItem_light_gray), PorterDuff.Mode.SRC_IN)
+            binding.navbar.todoList.setColorFilter(ContextCompat.getColor(this, R.color.navbarItem_light_gray), PorterDuff.Mode.SRC_IN)
+            binding.navbar.shopList.setColorFilter(ContextCompat.getColor(this, R.color.navbarItem_light_gray), PorterDuff.Mode.SRC_IN)
+            binding.navbar.calendar.setColorFilter(ContextCompat.getColor(this, R.color.navbarItem_light_gray), PorterDuff.Mode.SRC_IN)
 
-            it.background.setTint(resources.getColor(R.color.navbarItem_dark_gray))
+            navbarItem.setColorFilter(ContextCompat.getColor(this, R.color.navbarItem_dark_gray), PorterDuff.Mode.SRC_IN)
         }
     }
-
-    override fun onDestroy() {
-        super.onDestroy()
-    }
-
 }

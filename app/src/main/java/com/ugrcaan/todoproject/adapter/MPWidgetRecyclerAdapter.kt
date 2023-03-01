@@ -6,10 +6,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ugrcaan.todoproject.R
 
+
+//TODO ADD DATABASE CONVERTING TO LIVEDATA OR FLOW
 class MPWidgetRecyclerAdapter() : RecyclerView.Adapter<MPWidgetRecyclerAdapter.RowHolder>(){
 
     class RowHolder(view: View) : RecyclerView.ViewHolder(view){
-
         fun bind(){
 
         }
